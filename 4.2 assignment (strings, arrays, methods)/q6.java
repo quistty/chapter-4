@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class q6 {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
         int sum = 0;
-        int count = 1;
         int lowestNum = 1001;
         int highestNum = 0;
 
@@ -15,7 +15,6 @@ public class q6 {
         for (int i = 0; i < intArray.length; i++) {
             System.out.println(intArray[i]);
             sum += intArray[i];
-            count++;
             if (intArray[i] < lowestNum) {
                 lowestNum = intArray[i];
             }
@@ -29,5 +28,6 @@ public class q6 {
         System.out.println("Average of array elements: " + average);
         System.out.println("Lowest number in the array: " + lowestNum);
         System.out.println("Highest number in the array: " + highestNum);
+        in.close();
     }
 }

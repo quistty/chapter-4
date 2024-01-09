@@ -10,5 +10,6 @@ public class q5 {
         for (int i = 14; i >= 0; i--) {
             System.out.println(randomArray[i] + " ");
         }
+        in.close();
     }
 }

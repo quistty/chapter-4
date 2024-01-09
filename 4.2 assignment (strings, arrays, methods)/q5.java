@@ -8,7 +8,7 @@ public class q5 {
             randomArray[i] = randomArray[i] * 25; // multiplies numbers by 25
         }
         for (int i = 14; i >= 0; i--) {
-            System.out.println(randomArray[i] + " "); // prints numbers from 25 to 375
+            System.out.print(randomArray[i] + " "); // prints numbers from 25 to 375
         }
         in.close();
     }

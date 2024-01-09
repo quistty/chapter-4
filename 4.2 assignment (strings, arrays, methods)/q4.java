@@ -4,6 +4,7 @@ public class q4 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
+        // gathers user input
         System.out.println("Input a number");
         int num1 = in.nextInt();
         System.out.println("Input a larger number");
@@ -14,6 +15,7 @@ public class q4 {
     }
 
     public static void printEven(int smaller, int larger) {
+        // checks and prints for even numbers
         smaller++; // so that it does not include the inputted number in the numbers printed
         if (smaller % 2 != 0) {
             smaller++;

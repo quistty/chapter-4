@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class q11 {
 
-    public static String removeChar(String str, char change) {
+    public static String removeChar(String str, char change) { // removes passed char from passed string
         // Declare result outside the loop to keep track of the modified string
 
         for (int i = 0; i < str.length(); i++) {
@@ -19,17 +19,18 @@ public class q11 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        // Case 1: User input
+        // Case 1: User input and char being a
         System.out.println("Input a string");
         String userInputString = in.nextLine();
         char userCharChange = 'a';
         String result1 = removeChar(userInputString, userCharChange);
         System.out.println("Result 1: " + result1);
 
-        // Case 2: Hardcoded string
+        // Case 2: Hardcoded string and char
         String userInputString2 = "bobbie";
         char userCharChange2 = 'b';
         String result2 = removeChar(userInputString2, userCharChange2);
         System.out.println("Result 2: " + result2);
+        in.close();
     }
 }

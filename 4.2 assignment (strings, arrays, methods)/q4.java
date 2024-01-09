@@ -10,7 +10,7 @@ public class q4 {
         int num2 = in.nextInt();
 
         printEven(num1, num2);
-
+        in.close();
     }
 
     public static void printEven(int smaller, int larger) {

@@ -7,7 +7,7 @@ public class q3 {
 
         double triangleArea = calcArea();
         System.out.println("The area of the triangle is: " + triangleArea);
-
+        in.close();
     }
 
     public static double calcArea() {
@@ -16,7 +16,9 @@ public class q3 {
         double base = in.nextInt();
         System.out.println("Input the height of your triangle");
         double height = in.nextInt();
+        in.close();
         double area = ((base * height) / 2);
         return area;
+
     }
 }

@@ -3,43 +3,39 @@ import java.util.Scanner;
 public class q12 {
 
     public static boolean echecker(String[] array) {
-        String stringChecker;
-        boolean hasE = false;
-        int counter = 0;
-        boolean counterTrueOrFalse;
         for (int i = 0; i < array.length; i++) { // while i is less than the length of the array, make the stringchecker
                                                  // equal to the string with the same index as i
-            stringChecker = array[i];
-            counterTrueOrFalse = false;
-            for (int j = 0; j < stringChecker.length(); j++) { // gets the string
-                System.out.println(counter + ": What is this");
-                System.out.println(counterTrueOrFalse + ": counter true or false");
+            String stringChecker = array[i];
+            boolean count = false;
+
+            for (int j = 0; j < stringChecker.length(); j++) {
+                // checks for e and exits checking for e for the rest of the word
                 if (stringChecker.charAt(j) == 'e') {
-                    System.out.println("AAAAAAAAAAAAAAAAAA");
-                    counter++;
-                    counterTrueOrFalse = true;
+                    count = true;
+                    break;
                 }
-                if ((j == stringChecker.length() - 1) && (counter == 0)) {
-                    counterTrueOrFalse = false;
-                }
-                if (counterTrueOrFalse == true) { // doesnt work bc if u have a word with more than 1 e, it adds 1
-                    return true;
-                }
-                if (counterTrueOrFalse == false) {
-                    return false;
-                }
+            }
+
+            // if e isnt found in a string it will return false
+            if (!count) {
+                return false;
             }
         }
 
+        // happens after all words in the string have been looked at, and it returns
+        // true
+        return true;
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String[] array = { "bobbie", "nobb", "black uncanny", "defenestration",
                 "pneumonoultramicroscopicsilicovolcanoconiosis" };
-        System.out.println(echecker(array)); // true
+        System.out.println(echecker(array)); // false
+
         String[] array2 = { "bobe", "nobbe", "black uncannye" };
-        System.out.println(echecker(array2)); // false
+        System.out.println(echecker(array2)); // true
+
         in.close();
     }
 }

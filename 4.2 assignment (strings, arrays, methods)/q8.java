@@ -20,6 +20,5 @@ public class q8 {
         for (int i = 0; i < divisibleArray.length; i++) { // prints all numbers divisible by 7
             System.out.print(divisibleArray[i] + " ");
         }
-        System.out.println(divisibleBySeven(intArray));
     }
 }

@@ -15,6 +15,17 @@ public class game {
                 System.out.println("Blud you do not have enough money, don't leeave ur momns in the hood or this yute will be smoked");
             } else {
                 System.out.println("ok good wager");
+                int userRandom = random.nextInt(6) + 1;
+                int systemRandom = random.nextInt(6) + 1;
+                if (systemRandom > userRandom){
+                    points -= wager;
+                    System.out.println("yikes, you lost your wager. You now have " + points + " points.");
+                } else if (systemRandom < userRandom) {
+                    points += wager;
+                    System.out.println("you doubled your wager! You now have " + points + " points.");
+                } else {
+                    System.out.println("You got the 1 and 36 chance. no wager lost. You have " + points + " points.");
+                }
             }
         } 
         in.close();

@@ -19,9 +19,7 @@ public class Book extends LibraryItem {
         return numPages;
     }
 
-    // Checks if the book's genre matches a given genre
-    // @param area: the genre to check against
-    // @return true if genres match, false otherwise
+    // Checks if the book's genre matches a given genre by checking if the string inputted is the same as the instance genre variable
     public boolean isInGenre(String area) {
         return genre.equalsIgnoreCase(area);
     }
